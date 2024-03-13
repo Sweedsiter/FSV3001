@@ -3,6 +3,7 @@ import { useState } from "react";
 import Data from "../../Data/Data";
 
 import "./Menu.css";
+import Admin from "../Admin/Admin";
 
 function Menu(props) {
   const Group = props.Group;
@@ -13,7 +14,7 @@ function Menu(props) {
 
   return (
     <div className="Menu">
-      <h4 style={{ textAlign: "left" }}>Groups</h4>
+      <h4 style={{ textAlign: "left", paddingLeft: "0.8rem" }}>Groups</h4>
       <br />
       <ul>
         {Group.map((item) => {
@@ -21,7 +22,7 @@ function Menu(props) {
             <li
               key={item._id}
               onClick={() => setSeletGroup(item)}
-              style={{ fontSize: "16px" }}
+              style={{ fontSize: "18px" }}
             >
               {item}&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
               {Data.filter((e) => e.Group === item).length}
@@ -34,6 +35,8 @@ function Menu(props) {
         <br /> <br />
         <hr />
       </ul>
+      <br />
+      <Admin />
     </div>
   );
 }

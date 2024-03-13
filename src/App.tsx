@@ -4,6 +4,7 @@ import Card from "./Contener/Cards/Card";
 import Menu from "./Contener/MenuList/Menu";
 import Data from "./Data/Data";
 import Header from "./Contener/Header/Header";
+import Nav from "./Contener/Navbar/Nav";
 
 function App() {
   // State
@@ -24,9 +25,10 @@ function App() {
   // Show Data
   return (
     <div className="App">
+      <Nav />
       <Header />
       <div className="contener">
-        <Menu Group={Group} SeletGroup={setOneData}  />
+        <Menu Group={Group} SeletGroup={setOneData} />
         <Card Data={!oneData ? Data : GropuSl} DataId={(e) => console.log(e)} />
       </div>
     </div>

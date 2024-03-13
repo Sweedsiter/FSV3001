@@ -1,0 +1,11 @@
+.Nav {
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+  visibility: hidden;
+}
+@media only screen and (max-width: 600px) {
+  .Nav {
+    visibility: visible;
+  }
+}
