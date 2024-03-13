@@ -1,0 +1,16 @@
+.Header {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: center;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  padding: 0 3rem;
+  border-radius: 0 0 25px 25px;
+}
+@media only screen and (max-width: 600px) {
+  .Header {
+    width: 100%;
+    padding: 0 3rem;
+  }
+}
