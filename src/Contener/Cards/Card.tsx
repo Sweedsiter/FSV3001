@@ -1,11 +1,14 @@
+import { useState } from "react";
 import "./Card.css";
 
-function Card({ Data, DataId }) {
+function Card({ Data, DataId, SearchName }) {
+  const [SS, setSS] = useState(Data);
+  console.log(SearchName);
   return (
     <div className="Cards">
       {!Data.length
         ? "Loading..."
-        : Data.map((item) => {
+        : SS.map((item) => {
             return (
               <div
                 key={item._id}

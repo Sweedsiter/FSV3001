@@ -4,9 +4,11 @@ import Data from "../../Data/Data";
 
 import "./Menu.css";
 import Admin from "../Admin/Admin";
+import Deshboard from "../../Component/Deshoard/Deshboard";
 
 function Menu(props) {
   const Group = props.Group;
+  const Status = props.Status;
 
   const [SeletGroup, setSeletGroup] = useState("");
 
@@ -22,21 +24,36 @@ function Menu(props) {
             <li
               key={item._id}
               onClick={() => setSeletGroup(item)}
-              style={{ fontSize: "18px" }}
+              style={{ fontSize: "18px", cursor: "pointer" }}
             >
               {item}&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
               {Data.filter((e) => e.Group === item).length}
             </li>
           );
         })}
-        <li onClick={() => setSeletGroup()}>
+        <li
+          onClick={() => setSeletGroup()}
+          style={{ fontSize: "18px", cursor: "pointer" }}
+        >
           All &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{Data.length}
         </li>
+        <br />
+        <input
+          type="text"
+          placeholder="Search..."
+          style={{ fontSize: "14px", textAlign: "left", padding: "0.2rem" }}
+          onChange={(e) => props.SearchName(e.target.value)}
+        />
         <br /> <br />
         <hr />
       </ul>
       <br />
-      <Admin />
+      <Admin ADlogin={props.ADlogin} />
+      <br />
+      <hr />
+      <br />
+      {Status && <Deshboard />}
+      <br /> <hr />
     </div>
   );
 }

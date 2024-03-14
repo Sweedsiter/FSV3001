@@ -10,6 +10,8 @@ function App() {
   // State
   // const [Data, setData] = useState([]);
   const [oneData, setOneData] = useState();
+  const [AdminLogin, setAdminLogin] = useState();
+  const [SearchName, setSearchName] = useState();
 
   // Api call
   // fetch("https://jjvpp9-3000.csb.app/product")
@@ -26,10 +28,20 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      <Header />
+      <Header Status={AdminLogin} />
       <div className="contener">
-        <Menu Group={Group} SeletGroup={setOneData} />
-        <Card Data={!oneData ? Data : GropuSl} DataId={(e) => console.log(e)} />
+        <Menu
+          Group={Group}
+          SeletGroup={setOneData}
+          ADlogin={(e) => setAdminLogin(e)}
+          Status={AdminLogin}
+          SearchName={(e) => setSearchName(e)}
+        />
+        <Card
+          Data={!oneData ? Data : GropuSl}
+          DataId={(e) => console.log(e)}
+          SearchName={SearchName}
+        />
       </div>
     </div>
   );

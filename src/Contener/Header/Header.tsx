@@ -1,8 +1,10 @@
-import { IoMdLock, IoMdUnlock } from "react-icons/io";
+import { IoMdLock } from "react-icons/io";
 
 import "./Header.css";
-function Header() {
-  const Admin = "Admin";
+
+function Header({ Status }) {
+  const Admin = Status;
+
   return (
     <div className="Header">
       <div className="L">
