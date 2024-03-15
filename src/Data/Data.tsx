@@ -144,11 +144,11 @@ const Data = [
   },
   {
     _id: "13",
-    Name: "shoe 001",
-    Group: "Shoe",
+    Name: "Shirt 001",
+    Group: "Shirt",
     Price: "2555",
     Image:
-      "https://contents.mediadecathlon.com/p2606919/k$a531927e5c71c12f4d3edac227199f78/jogflow-5001-men-s-running-shoes-white-blue-red.jpg?format=auto&quality=40&f=452x452",
+      "https://storage.googleapis.com/fastwork-static/6243cb15-daae-425d-8462-3bfa1c3c91c0.jpg",
     Total: "26",
     Details: `กกกกก  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste\n
             dolorem quo dignissimos tenet ur reprehenderit. Id, officia.\n        
@@ -227,6 +227,18 @@ const Data = [
     Price: "2555",
     Image:
       "https://contents.mediadecathlon.com/p2606919/k$a531927e5c71c12f4d3edac227199f78/jogflow-5001-men-s-running-shoes-white-blue-red.jpg?format=auto&quality=40&f=452x452",
+    Total: "26",
+    Details: `กกกกก  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste\n
+            dolorem quo dignissimos tenet ur reprehenderit. Id, officia.\n        
+            ssumenda numquam molestias a voluptate. Voluptas, 
+    possimus\n temporibus! Amet adipisci odit nihil quod voluptate?`,
+  },
+  {
+    _id: "20",
+    Name: "เสื้อ",
+    Group: "Shirt",
+    Price: "250",
+    Image: "https://ideakidshop.com/sites/idea_kid/upload/34491_img1.jpg",
     Total: "26",
     Details: `กกกกก  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste\n
             dolorem quo dignissimos tenet ur reprehenderit. Id, officia.\n        

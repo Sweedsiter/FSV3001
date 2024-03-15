@@ -5,6 +5,7 @@ import Menu from "./Contener/MenuList/Menu";
 import Data from "./Data/Data";
 import Header from "./Contener/Header/Header";
 import Nav from "./Contener/Navbar/Nav";
+import CardOne from "./Contener/Cards/CardOne";
 
 function App() {
   // State
@@ -12,6 +13,7 @@ function App() {
   const [oneData, setOneData] = useState();
   const [AdminLogin, setAdminLogin] = useState();
   const [SearchName, setSearchName] = useState();
+  const [DataId, setDataId] = useState();
 
   // Api call
   // fetch("https://jjvpp9-3000.csb.app/product")
@@ -22,7 +24,12 @@ function App() {
   const Group = Data.map((e) => e.Group).filter(
     (e, i, a) => a.indexOf(e) === i,
   );
+
+  // Selet Group
   const GropuSl = Data.filter((e) => e.Group === oneData);
+
+  // Selet OneData
+  const DataOneId = Data.filter((e) => e._id === DataId);
 
   // Show Data
   return (
@@ -37,11 +44,17 @@ function App() {
           Status={AdminLogin}
           SearchName={(e) => setSearchName(e)}
         />
-        <Card
-          Data={!oneData ? Data : GropuSl}
-          DataId={(e) => console.log(e)}
-          SearchName={SearchName}
-        />
+
+        {/* Card Show */}
+        {!DataOneId.length ? (
+          <Card
+            Data={!oneData ? Data : GropuSl}
+            DataId={(e) => setDataId(e)}
+            SearchName={SearchName}
+          />
+        ) : (
+          <CardOne Data={DataOneId} BackDrop={() => setDataId(null)} />
+        )}
       </div>
     </div>
   );
