@@ -29,4 +29,7 @@
     height: auto;
     padding: 0;
   }
+  .App .contener {
+    width: 100%;
+  }
 }
