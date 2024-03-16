@@ -19,10 +19,10 @@ function Menu(props) {
       <h4 style={{ textAlign: "left", paddingLeft: "0.8rem" }}>Groups</h4>
       <br />
       <ul>
-        {Group.map((item) => {
+        {Group.map((item, i) => {
           return (
             <li
-              key={item._id}
+              key={i}
               onClick={() => setSeletGroup(item)}
               style={{ fontSize: "18px", cursor: "pointer" }}
             >
