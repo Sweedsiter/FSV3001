@@ -2,7 +2,7 @@ import "./CardOne.css";
 function CardOne({ Data, BackDrop }) {
   return (
     <div className="CardOne">
-      {Data.map((item,i) => {
+      {Data.map((item, i) => {
         return (
           <div key={i} className="oneitems">
             <a href={item.Image} target="_blank">

@@ -40,20 +40,20 @@ function App() {
         <Menu
           Group={Group}
           SeletGroup={setOneData}
-          ADlogin={(e) => setAdminLogin(e)}
+          ADlogin={setAdminLogin}
           Status={AdminLogin}
-          SearchName={(e) => setSearchName(e)}
+          SearchName={setSearchName}
         />
 
         {/* Card Show */}
         {!DataOneId.length ? (
           <Card
             Data={!oneData ? Data : GropuSl}
-            DataId={(e) => setDataId(e)}
+            DataId={setDataId}
             SearchName={SearchName}
           />
         ) : (
-          <CardOne Data={DataOneId} BackDrop={() => setDataId(null)} />
+          <CardOne Data={DataOneId} BackDrop={setDataId} />
         )}
       </div>
     </div>
