@@ -2,9 +2,9 @@ import "./CardOne.css";
 function CardOne({ Data, BackDrop }) {
   return (
     <div className="CardOne">
-      {Data.map((item) => {
+      {Data.map((item,i) => {
         return (
-          <div key={item._id} className="oneitems">
+          <div key={i} className="oneitems">
             <a href={item.Image} target="_blank">
               <img src={item.Image} alt="" />
             </a>

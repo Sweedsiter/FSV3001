@@ -6,13 +6,9 @@ function Card({ Data, DataId, SearchName }) {
       {!Data.length
         ? "Loading..."
         : !SearchName
-          ? Data.map((item) => {
+          ? Data.map((item, i) => {
               return (
-                <div
-                  key={item._id}
-                  className="items"
-                  onClick={() => DataId(item._id)}
-                >
+                <div key={i} className="items" onClick={() => DataId(item._id)}>
                   <img src={item.Image} alt="" />
                   <div>
                     <p>{item.Name}</p>
@@ -21,13 +17,9 @@ function Card({ Data, DataId, SearchName }) {
                 </div>
               );
             })
-          : Data.filter((e) => e.Name === SearchName).map((item) => {
+          : Data.filter((e) => e.Name === SearchName).map((item, i) => {
               return (
-                <div
-                  key={item._id}
-                  className="items"
-                  onClick={() => DataId(item._id)}
-                >
+                <div key={i} className="items" onClick={() => DataId(item._id)}>
                   <img src={item.Image} alt="" />
                   <div>
                     <p>{item.Name}</p>
